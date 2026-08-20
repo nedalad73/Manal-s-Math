@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="أكاديمية المعلمة منال أبو زنيد - منصة رياضيات مرحة وشاملة للمرحلة الابتدائية">
+<title>أكاديمية المعلمة منال أبو زنيد | الرياضيات المرحة</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+:root{--purple:#6637d7;--purple2:#8e5be8;--pink:#f13b78;--blue:#2495ed;--green:#31a853;--orange:#ff9d20;--teal:#16aaa7;--yellow:#ffc928;--ink:#241a43;--muted:#6f6884;--bg:#f7f4ff;--white:#fff;--shadow:0 12px 32px #35245b15}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(#f1edff,#fff 40%,#f8f5ff);font-family:Cairo,Arial,sans-serif;color:var(--ink)}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:50;background:#2e1557eF;backdrop-filter:blur(14px);color:#fff;box-shadow:0 4px 18px #0002}
+.nav{max-width:1320px;margin:auto;min-height:72px;padding:8px 16px;display:flex;align-items:center;gap:10px}.logo{font-weight:900;font-size:21px;line-height:1.1;flex:1}.logo small{display:block;color:#ffd5e5;font-size:11px;font-weight:600}.nav a{color:#fff;text-decoration:none;padding:9px 12px;border-radius:12px;font-weight:700}.nav a:hover{background:#ffffff1c}.menu{display:none}
+.container{max-width:1320px;margin:auto;padding:22px 16px}
+.hero{background:linear-gradient(135deg,#d7f5ff 0%,#fff 45%,#ffe1ef 100%);border-radius:32px;padding:40px;display:grid;grid-template-columns:1.5fr .8fr;gap:25px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.hero:after{content:"➕  ✖️  ➗  ➖";position:absolute;bottom:-10px;left:25px;font-size:42px;opacity:.12;word-spacing:22px}
+.kicker{color:var(--purple);font-weight:900;font-size:18px}.hero h1{font-size:clamp(34px,5vw,64px);line-height:1.12;color:#d62e72;margin:8px 0}.hero h2{color:#51259f;margin:0 0 12px}.hero p{font-size:17px;line-height:2;color:#4d4561;max-width:760px}.hero-art{font-size:120px;text-align:center;align-self:center;filter:drop-shadow(0 12px 10px #4b287333);animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-12px) rotate(2deg)}}
+.btn{padding:12px 20px;border-radius:15px;border:0;font-weight:900}.primary{background:linear-gradient(90deg,var(--pink),#ff639b);color:#fff;box-shadow:0 8px 18px #f13b7840}.secondary{background:#ede6ff;color:#5725b4}.green{background:var(--green);color:#fff}
+.section{margin-top:38px}.title{text-align:center;margin-bottom:20px}.title h2{font-size:30px;margin:0}.title p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:18px}.stat{background:#fff;padding:18px;border-radius:20px;box-shadow:var(--shadow);text-align:center}.stat b{display:block;font-size:30px;color:var(--purple)}
+.card{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:22px}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.game{border:2px solid #eee;padding:20px;border-radius:23px;background:#fff;text-align:center;transition:.25s;position:relative;overflow:hidden}.game:hover{transform:translateY(-5px);box-shadow:0 15px 30px #4d2b7715}.game .emoji{font-size:55px}.game h3{margin:5px 0;color:var(--c);font-size:22px}.game p{color:var(--muted);min-height:48px}.game .tag{position:absolute;top:12px;left:12px;background:#f2edff;color:#5b28b0;padding:3px 8px;border-radius:9px;font-size:11px;font-weight:800}
+.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.level{padding:14px 8px;background:#f0eaff;color:#5423ac;border-radius:14px;font-weight:900}.level.active{background:var(--purple);color:#fff}
+.learning{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.learn{padding:20px;border-radius:21px;background:#fff;box-shadow:var(--shadow);text-align:center}.learn .emoji{font-size:42px}.learn h3{margin:6px 0}.learn p{color:var(--muted)}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tool h3{margin-top:0}.tool input,.tool select{width:100%;padding:12px;border:2px solid #e5dff2;border-radius:13px;margin:6px 0 10px;outline:0}.tool input:focus,.tool select:focus{border-color:var(--purple)}.tool-result{background:#f5f0ff;border-radius:15px;padding:13px;text-align:center;font-weight:900;font-size:21px}
+.faq details{background:#fff;border-radius:16px;margin:9px 0;padding:15px 18px;box-shadow:0 5px 18px #35245b0c}.faq summary{font-weight:900;cursor:pointer}
+.modal{position:fixed;inset:0;background:#180d2dcc;z-index:100;display:none;align-items:center;justify-content:center;padding:15px}.modal.show{display:flex}.box{width:min(900px,100%);max-height:94vh;overflow:auto;background:#fff;border-radius:28px;padding:25px;position:relative}.close{position:absolute;left:14px;top:14px;border:0;background:#eee;border-radius:50%;width:40px;height:40px;font-size:22px}.question{background:linear-gradient(135deg,#f9f5ff,#eef9ff);padding:25px;border-radius:22px;text-align:center;margin-top:15px}.question .q{font-size:45px;font-weight:900;margin:18px 0}.answers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.answer{padding:15px;background:#fff;border:3px solid #e6def6;border-radius:15px;font-size:24px;font-weight:900}.answer:hover{border-color:var(--purple)}.correct{background:#dff7e5!important;border-color:var(--green)!important}.wrong{background:#ffe2e9!important;border-color:#e83b63!important}.progress{height:11px;background:#eee;border-radius:20px;overflow:hidden}.progress i{height:100%;display:block;background:linear-gradient(90deg,var(--pink),var(--purple));width:0}.result{text-align:center;padding:20px}.result .score{font-size:60px;color:var(--purple);font-weight:900}.notice{padding:15px;border-radius:15px;background:#fff8db;border:1px solid #ffe28b}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{background:#f0eaff;color:#5d28b5;border-radius:12px;padding:7px 11px;font-weight:800}
+footer{background:#2e1557;color:#fff;margin-top:45px;padding:32px;text-align:center}.footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:right}.footer-grid h3{color:#ffd0e3}.copyright{margin-top:22px;border-top:1px solid #ffffff22;padding-top:15px}
+@media(max-width:900px){.nav a{display:none}.menu{display:block;background:#ffffff18;color:#fff;border:1px solid #ffffff44;border-radius:10px;padding:8px}.hero{grid-template-columns:1fr;text-align:center}.games{grid-template-columns:1fr 1fr}.learning{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.tools{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.container{padding:14px}.hero{padding:25px 18px}.hero-art{font-size:80px}.games,.learning{grid-template-columns:1fr}.levels{grid-template-columns:repeat(2,1fr)}.answers{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats .stat{padding:12px}.nav{min-height:62px}}
+</style>
+
+<style>
+.profile-card{background:linear-gradient(135deg,#fff,#f4efff);overflow:hidden}.profile-layout{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center}.teacher-cartoon{font-size:145px;text-align:center;filter:drop-shadow(0 10px 10px #4d267733);animation:bob 3s ease-in-out infinite}.teacher-cartoon span{display:block;font-size:48px;margin-top:-30px}.profile-card h2{font-size:32px;color:#d62e72;margin:0 0 8px}.profile-card h3{color:#5527a7}.profile-card p,.profile-card li{line-height:2}.goal-list{padding-right:22px;columns:2}.goal-list li{margin:5px 0}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.contact-card{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);padding:18px;border-radius:20px;background:#fff;border:2px solid #eee;box-shadow:0 7px 20px #35245b0d;transition:.2s}.contact-card:hover{transform:translateY(-4px)}.contact-card>span{font-size:38px}.contact-card b,.contact-card small{display:block}.contact-card small{color:var(--muted);margin-top:4px}.whatsapp{border-color:#b9edc4}.instagram{border-color:#f6bdd3}.facebook{border-color:#bed8ff}.lesson-detail{padding-top:5px}.lesson-hero{text-align:center;font-size:65px;background:linear-gradient(135deg,#e5f8ff,#ffe7f1);border-radius:20px;padding:12px}.lesson-intro{font-size:19px;line-height:2;background:#f7f3ff;padding:15px;border-radius:16px}.lesson-points{display:grid;gap:10px}.lesson-points div{display:flex;gap:12px;align-items:center;background:#fff7db;border-radius:14px;padding:11px}.lesson-points b{background:var(--purple);color:#fff;border-radius:50%;min-width:32px;height:32px;text-align:center;line-height:32px}.lesson-points span{line-height:1.8}.example-box,.tip-box{padding:15px;border-radius:17px;margin-top:14px}.example-box{background:#eaf8ff;border:1px solid #bfe8ff}.tip-box{background:#fff1f6;border:1px solid #ffd0df}.example-box h3,.tip-box h3{margin-top:0}@media(max-width:800px){.profile-layout{grid-template-columns:1fr}.goal-list{columns:1}.contact-grid{grid-template-columns:1fr}}
+</style>
+
+<style>
+/* ===== إطار وألوان احترافية ===== */
+:root{
+ --violet:#6c3bd4;--violet-dark:#35156e;--pink:#f04f83;--sky:#39a9ee;
+ --mint:#2bbf9f;--gold:#ffbd32;--orange:#ff8b2c;--cream:#fffaf0;
+ --border:#eadffb;
+}
+body{
+ background:
+ radial-gradient(circle at 8% 8%,#ffe3ef 0 90px,transparent 91px),
+ radial-gradient(circle at 92% 18%,#dff6ff 0 110px,transparent 111px),
+ linear-gradient(135deg,#f7f0ff,#fff 45%,#f1fbff);
+}
+.container{position:relative}
+.container:before,.container:after{
+ content:"";position:absolute;z-index:-1;border-radius:45px;pointer-events:none;
+}
+.container:before{inset:10px -7px;background:linear-gradient(135deg,#ffd8e7,#e0d4ff,#ccefff);opacity:.55}
+.container:after{inset:18px -2px;border:3px dashed #d7bdf7;opacity:.55}
+
+.hero{
+ border:5px solid #fff;outline:2px solid #e7c8f7;
+ box-shadow:0 18px 45px #542b831c, inset 0 0 0 2px #ffffffaa;
+}
+.section.card,.card,.game,.learn,.stat,.faq details{
+ border:2px solid var(--border);
+ position:relative;
+}
+.section.card:before,.card:before,.game:before,.learn:before{
+ content:"";position:absolute;inset:0;border-radius:inherit;
+ pointer-events:none;border:2px solid #ffffffaa;
+}
+.game:nth-child(1){background:linear-gradient(145deg,#fff,#f0ffe9);border-color:#bde8ad}
+.game:nth-child(2){background:linear-gradient(145deg,#fff,#eaf6ff);border-color:#b7ddfa}
+.game:nth-child(3){background:linear-gradient(145deg,#fff,#f5edff);border-color:#d7c0fa}
+.game:nth-child(4){background:linear-gradient(145deg,#fff,#fff1df);border-color:#ffd09d}
+.game:nth-child(5){background:linear-gradient(145deg,#fff,#ffeaf3);border-color:#f7b7d0}
+.game:nth-child(6){background:linear-gradient(145deg,#fff,#e9fffb);border-color:#a9e7da}
+.game:nth-child(7){background:linear-gradient(145deg,#fff,#effbea);border-color:#c5e7b5}
+.game:nth-child(8){background:linear-gradient(145deg,#fff,#f2ebff);border-color:#cdb8f3}
+.game .btn,.learn .btn{box-shadow:0 7px 14px #3c246322;transition:.2s}
+.game .btn:hover,.learn .btn:hover,.btn:hover{transform:translateY(-2px) scale(1.02);filter:saturate(1.12)}
+.level{border:2px solid #dfd0f7;box-shadow:0 5px 12px #4b287712}
+.level.active{border-color:#5b2bbd}
+.stats .stat:nth-child(1){border-top:6px solid var(--pink)}
+.stats .stat:nth-child(2){border-top:6px solid var(--sky)}
+.stats .stat:nth-child(3){border-top:6px solid var(--gold)}
+.stats .stat:nth-child(4){border-top:6px solid var(--mint)}
+.profile-card{border:4px solid #fff;outline:2px solid #d9c4fa;box-shadow:0 18px 40px #512b7b18}
+.contact-card{border:3px solid #eee;box-shadow:0 9px 22px #3e287010}
+.contact-card.whatsapp{background:linear-gradient(135deg,#fff,#ecfff0);border-color:#a9e3b4}
+.contact-card.instagram{background:linear-gradient(135deg,#fff,#fff0f7);border-color:#f1b8d0}
+.contact-card.facebook{background:linear-gradient(135deg,#fff,#eef6ff);border-color:#b9d6f7}
+.faq details{border-right:6px solid var(--violet);transition:.2s}
+.faq details:nth-of-type(3n){border-right-color:var(--pink)}
+.faq details:nth-of-type(3n+1){border-right-color:var(--sky)}
+.faq details:nth-of-type(3n+2){border-right-color:var(--mint)}
+.faq details:hover{transform:translateX(-3px);box-shadow:0 8px 20px #452a7412}
+.tool{border-top:6px solid var(--violet)}
+.tool:nth-child(2){border-top-color:var(--orange)}
+.chip{border:2px solid #e2d4f7;box-shadow:0 4px 9px #4b28770d}
+.lesson-detail{border:3px solid #e5d5f8;border-radius:24px;padding:15px;background:linear-gradient(145deg,#fff,#faf7ff)}
+.example-box{border:2px solid #a8ddf8;box-shadow:0 6px 15px #278cc514}
+.tip-box{border:2px solid #f6bfd2;box-shadow:0 6px 15px #e9437b10}
+footer{border-top:7px solid #f5c6df;box-shadow:0 -12px 30px #31165325}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+<button class="menu" onclick="toggleMenu()">☰</button>
+<div class="logo">⭐ المعلمة منال أبو زنيد ⭐<small>أكاديمية الرياضيات المرحة للمرحلة الابتدائية</small></div>
+<a href="#home">الرئيسية</a><a href="#games">الألعاب</a><a href="#learn">التعلّم</a><a href="#tools">أدوات</a><a href="#teacher">عن المعلمة</a><a href="#contact">تواصل معنا</a><a href="#faq">المساعدة</a>
+</nav><div style="height:7px;background:linear-gradient(90deg,#f04f83,#ffbd32,#2bbf9f,#39a9ee,#6c3bd4);"></div></header>
+
+<main class="container">
+<section class="hero" id="home">
+<div><div class="kicker">🎓 مرحبًا بك في أكاديمية الرياضيات</div><h1>الرياضيات المرحة</h1><h2>تعلّم، العب، واكتشف قدراتك! 🌟</h2><p>منصة تعليمية عربية شاملة للمرحلة الابتدائية تجمع بين الدروس القصيرة، الألعاب التفاعلية، التمارين، التحديات، والمسائل الكلامية في تجربة ممتعة وسهلة.</p>
+<button class="btn primary" onclick="document.getElementById('games').scrollIntoView()">🎮 ابدأ التعلّم واللعب</button>
+<button class="btn secondary" onclick="document.getElementById('learn').scrollIntoView()">📚 استكشف الدروس</button></div>
+<div class="hero-art">👩‍🏫<br>🔢✨</div>
+</section>
+
+
+<section class="section card profile-card" id="teacher">
+<div class="profile-layout">
+<div class="teacher-cartoon">👩‍🏫<span>📚✨</span></div>
+<div>
+<div class="kicker">🌟 بطاقة تعريفية</div>
+<h2>أنا المعلمة منال كامل عمار أبو زنيد</h2>
+<h3>🏫 مدرسة في مدرسة ذكور طعه الرجعي الأساسية الكائنة في مدينة دورا</h3>
+<p>منصة تعليمية عربية شاملة للمرحلة الابتدائية تجمع بين الدروس القصيرة، الألعاب التفاعلية، التمارين، التحديات، والمسائل الكلامية في تجربة ممتعة وسهلة.</p>
+<h3>🎯 يهدف هذا الموقع إلى:</h3>
+<ul class="goal-list">
+<li>📚 تقديم محتوى رياضي مبسط يناسب طلاب المرحلة الابتدائية.</li>
+<li>🧠 مساعدة الطالب على فهم المفاهيم بدل حفظها فقط.</li>
+<li>🎮 تحويل التدريب على الرياضيات إلى ألعاب وتحديات ممتعة.</li>
+<li>✏️ توفير تمارين متدرجة تساعد الطالب على التدريب خطوة بخطوة.</li>
+<li>💡 تنمية التفكير المنطقي والقدرة على حل المسائل الكلامية.</li>
+<li>🌟 تعزيز الثقة بالنفس وتشجيع الطالب على التعلم والمحاولة.</li>
+<li>🏠 جعل التعلم متاحًا في أي وقت ومن أي مكان.</li>
+<li>🚀 الانتقال من المفاهيم البسيطة إلى التحديات الأكثر تقدمًا.</li>
+</ul>
+</div></div></section>
+<div class="stats">
+<div class="stat">🎮 الألعاب<b>٨</b></div><div class="stat">📚 وحدات التعلّم<b>٦</b></div><div class="stat">⭐ المستويات<b>٤٠+</b></div><div class="stat">🧩 التمارين<b>١٠٠+</b></div>
+</div>
+
+<section class="section" id="games"><div class="title"><h2>🎮 مركز الألعاب التعليمية</h2><p>كل لعبة مستقلة وبها خمسة مستويات متدرجة</p></div><div class="games" id="gamesGrid"></div></section>
+
+<section class="section" id="learn"><div class="title"><h2>📚 تعلّم الرياضيات</h2><p>مفاهيم مبسطة قبل الانتقال إلى التحديات</p></div><div class="learning" id="learnGrid"></div></section>
+
+<section class="section card"><div class="title"><h2>🧠 تمارين سريعة</h2><p>اختر نوع المهارة وعدد الأسئلة وابدأ تدريبًا قصيرًا</p></div>
+<div class="chips"><button class="chip" onclick="quickPractice('add')">➕ جمع</button><button class="chip" onclick="quickPractice('sub')">➖ طرح</button><button class="chip" onclick="quickPractice('mul')">✖️ ضرب</button><button class="chip" onclick="quickPractice('div')">➗ قسمة</button><button class="chip" onclick="quickPractice('mix')">🎯 مختلط</button></div>
+</section>
+
+<section class="section" id="tools"><div class="title"><h2>🧰 أدوات الطالب</h2><p>أدوات بسيطة تساعد على الفهم والمراجعة</p></div><div class="tools">
+<div class="card tool"><h3>🔢 مولّد سؤال عشوائي</h3><select id="toolType"><option value="add">جمع</option><option value="sub">طرح</option><option value="mul">ضرب</option><option value="div">قسمة</option></select><button class="btn primary" onclick="generateToolQuestion()">إنشاء سؤال</button><div id="toolQ" class="tool-result">اضغط إنشاء سؤال</div></div>
+<div class="card tool"><h3>🧮 آلة حاسبة تعليمية</h3><input id="calcA" type="number" placeholder="العدد الأول"><select id="calcOp"><option>+</option><option>−</option><option>×</option><option>÷</option></select><input id="calcB" type="number" placeholder="العدد الثاني"><button class="btn green" onclick="calculate()">احسب</button><div id="calcResult" class="tool-result">النتيجة تظهر هنا</div></div>
+</div></section>
+
+<section class="section card"><div class="title"><h2>🎯 ماذا يتعلّم الطالب؟</h2></div>
+<div class="chips"><span class="chip">الأعداد والقيمة المكانية</span><span class="chip">المقارنة والترتيب</span><span class="chip">الجمع</span><span class="chip">الطرح</span><span class="chip">الضرب</span><span class="chip">القسمة</span><span class="chip">الكسور</span><span class="chip">الوقت</span><span class="chip">النقود</span><span class="chip">القياس</span><span class="chip">الهندسة</span><span class="chip">الأنماط</span><span class="chip">المسائل الكلامية</span><span class="chip">التفكير المنطقي</span></div></section>
+
+
+<section class="section card contact" id="contact">
+<div class="title"><h2>💗 تواصل معنا</h2><p>يسعدنا استقبال الاستفسارات والملاحظات.</p></div>
+<div class="contact-grid">
+<a class="contact-card whatsapp" href="https://wa.me/972592503624" target="_blank" rel="noopener"><span>💬</span><div><b>واتس اب</b><small>+972592503624</small></div></a>
+<a class="contact-card instagram" href="https://www.instagram.com/manal_abo_zned" target="_blank" rel="noopener"><span>📸</span><div><b>إنستقرام</b><small>manal_abo_zned</small></div></a>
+<a class="contact-card facebook" href="https://www.facebook.com/search/top?q=%D9%85%D9%86%D8%A7%D9%84%20%D9%83%D8%A7%D9%85%D9%84%20%D8%A7%D8%A8%D9%88%20%D8%B2%D9%86%D9%8A%D8%AF" target="_blank" rel="noopener"><span>🔵</span><div><b>فيس بوك</b><small>منال كامل ابو زنيد</small></div></a>
+</div></section>
+<section class="section faq" id="faq">
+<div class="title"><h2>❓ المساعدة والأسئلة الشائعة</h2><p>الأسئلة التالية تتعلق فقط بالمعلومات الموجودة داخل الموقع.</p></div>
+<details><summary>ما اسم المنصة؟</summary><p>أكاديمية المعلمة منال أبو زنيد للرياضيات المرحة.</p></details>
+<details><summary>من هي المعلمة؟</summary><p>أنا المعلمة منال كامل عمار أبو زنيد.</p></details>
+<details><summary>أين تعمل المعلمة؟</summary><p>في مدرسة ذكور طعه الرجعي الأساسية الكائنة في مدينة دورا.</p></details>
+<details><summary>لمن صُمم الموقع؟</summary><p>لطلاب المرحلة الابتدائية.</p></details>
+<details><summary>ما هدف الموقع؟</summary><p>تقديم تعلم رياضيات مبسط وممتع يجمع بين الدروس والألعاب والتمارين والتحديات والمسائل الكلامية.</p></details>
+<details><summary>ما الألعاب الموجودة؟</summary><p>الجمع الذكي، مغامرة الطرح، مدينة الضرب، رحلة القسمة، القيمة المكانية، مملكة الكسور، المحقق الصغير، والتحدي الكبير.</p></details>
+<details><summary>كم مستوى في كل لعبة؟</summary><p>خمسة مستويات متدرجة لكل لعبة.</p></details>
+<details><summary>هل توجد لعبة للجمع؟</summary><p>نعم، الجمع الذكي.</p></details>
+<details><summary>هل توجد لعبة للطرح؟</summary><p>نعم، مغامرة الطرح.</p></details>
+<details><summary>هل توجد لعبة للضرب؟</summary><p>نعم، مدينة الضرب.</p></details>
+<details><summary>هل توجد لعبة للقسمة؟</summary><p>نعم، رحلة القسمة.</p></details>
+<details><summary>هل توجد لعبة للقيمة المكانية؟</summary><p>نعم، لتعلم الآحاد والعشرات والمئات والآلاف.</p></details>
+<details><summary>هل توجد لعبة للكسور؟</summary><p>نعم، مملكة الكسور.</p></details>
+<details><summary>هل توجد مسائل كلامية؟</summary><p>نعم، لعبة المحقق الصغير لتدريب الطالب على فهم المسألة واختيار العملية المناسبة.</p></details>
+<details><summary>هل توجد لعبة شاملة؟</summary><p>نعم، التحدي الكبير يجمع مهارات رياضيات متعددة.</p></details>
+<details><summary>ما موضوعات التعلم؟</summary><p>الأعداد والقيمة المكانية، الجمع والطرح، الضرب والقسمة، الكسور، القياس والهندسة، وحل المسائل والتفكير المنطقي.</p></details>
+<details><summary>ماذا يحدث عند الضغط على «افتح الدرس»؟</summary><p>يظهر شرح مفصل ومبسط للمفهوم، مع خطوات ومثال ونصيحة تساعد الطالب على الفهم بطريقة مناسبة للعقول البسيطة.</p></details>
+<details><summary>هل توجد تمارين سريعة؟</summary><p>نعم، للجمع والطرح والضرب والقسمة والتدريب المختلط.</p></details>
+<details><summary>هل يوجد مولد أسئلة؟</summary><p>نعم، مولد سؤال عشوائي للجمع والطرح والضرب والقسمة.</p></details>
+<details><summary>هل توجد آلة حاسبة تعليمية؟</summary><p>نعم، لإجراء العمليات الأساسية.</p></details>
+<details><summary>هل توجد لوحة صدارة؟</summary><p>لا، تم إلغاء لوحة الصدارة والتركيز على التعلم والإنجاز الشخصي.</p></details>
+<details><summary>هل الموقع مناسب للهاتف؟</summary><p>نعم، التصميم متجاوب مع الهاتف والكمبيوتر.</p></details>
+<details><summary>هل الموقع باللغة العربية؟</summary><p>نعم، باللغة العربية وباتجاه من اليمين إلى اليسار.</p></details>
+<details><summary>ما رقم الواتس اب؟</summary><p>+972592503624.</p></details>
+<details><summary>ما حساب الإنستقرام؟</summary><p>manal_abo_zned.</p></details>
+<details><summary>ما اسم الفيس بوك؟</summary><p>منال كامل ابو زنيد.</p></details>
+<details><summary>هل توجد صور كرتونية؟</summary><p>نعم، تحتوي الواجهة على شخصيات ورموز كرتونية وتعليمية مشجعة للطالب.</p></details>
+</section>
+</main>
+
+<footer><div class="footer-grid"><div><h3>🎓 أكاديمية المعلمة منال أبو زنيد</h3><p>الرياضيات تصبح أسهل عندما نتعلمها باللعب والممارسة.</p></div><div><h3>📚 أقسام المنصة</h3><p>الألعاب • الدروس • التمارين • الأدوات • المسائل الكلامية</p></div><div><h3>💗 تواصل معنا</h3><p>واتس اب: +972592503624<br>إنستقرام: manal_abo_zned<br>فيس بوك: منال كامل ابو زنيد</p></div></div><div class="copyright">جميع الحقوق محفوظة © ٢٠٢٦ — المعلمة منال كامل عمار أبو زنيد</div></footer>
+
+<div class="modal" id="modal"><div class="box"><button class="close" onclick="closeGame()">×</button><div id="gameBox"></div></div></div>
+
+<script>
+const games=[
+{id:'add',name:'الجمع الذكي',emoji:'➕',color:'#31a853',desc:'الجمع العمودي والذهني والتحديات'},
+{id:'sub',name:'مغامرة الطرح',emoji:'➖',color:'#2495ed',desc:'الطرح والاستلاف والمقارنة'},
+{id:'mul',name:'مدينة الضرب',emoji:'✖️',color:'#7541d6',desc:'جداول الضرب والتحديات السريعة'},
+{id:'div',name:'رحلة القسمة',emoji:'➗',color:'#ff9d20',desc:'القسمة والمشاركة بالتساوي'},
+{id:'place',name:'القيمة المكانية',emoji:'🔢',color:'#e33b78',desc:'الآحاد والعشرات والمئات والآلاف'},
+{id:'fraction',name:'مملكة الكسور',emoji:'🍕',color:'#e64c8c',desc:'النصف والربع والكسور المتكافئة'},
+{id:'word',name:'المحقق الصغير',emoji:'🕵️',color:'#16aaa7',desc:'مسائل كلامية وتفكير منطقي'},
+{id:'mix',name:'التحدي الكبير',emoji:'🏆',color:'#5e38bd',desc:'مزيج من مهارات الرياضيات'}
+];
+const lessons=[
+['🔢','الأعداد والقيمة المكانية','تعرّف إلى الآحاد والعشرات والمئات والآلاف.'],
+['➕','الجمع والطرح','تدرّب على الجمع والطرح الذهني والعمودي.'],
+['✖️','الضرب والقسمة','افهم العلاقة بين الضرب والقسمة وجداول الضرب.'],
+['🍕','الكسور','تعرّف إلى أجزاء الكل والمقارنة بين الكسور.'],
+['📏','القياس والهندسة','الطول والوزن والوقت والأشكال والمحيط.'],
+['🧠','حل المسائل','اقرأ السؤال، حدّد المعطيات واختر العملية المناسبة.']
+];
+const ar=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+let current=null,level=1,index=0,score=0,qs=[],timer=null,left=15;
+function gamesRender(){document.getElementById('gamesGrid').innerHTML=games.map(g=>`<article class="game" style="--c:${g.color}"><span class="tag">٥ مستويات</span><div class="emoji">${g.emoji}</div><h3>${g.name}</h3><p>${g.desc}</p><button class="btn" style="background:${g.color};color:#fff" onclick="openGame('${g.id}')">ابدأ اللعبة 🎮</button></article>`).join('')}
+function lessonsRender(){document.getElementById('learnGrid').innerHTML=lessons.map(x=>`<article class="learn"><div class="emoji">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p><button class="btn secondary" onclick="showLesson('${x[1]}','${x[2]}')">افتح الدرس</button></article>`).join('')}
+function showLesson(t,d){document.getElementById('gameBox').innerHTML=`<h2>📚 ${t}</h2><p>${d}</p><div class="notice">💡 نصيحة: اشرح الفكرة بصوتك، ثم جرّب مثالًا بسيطًا قبل الانتقال إلى التحدي.</div><br><button class="btn primary" onclick="closeGame()">فهمت، لنبدأ بالتدريب 🎯</button>`;document.getElementById('modal').classList.add('show')}
+function openGame(id){current=games.find(g=>g.id===id);showLevels()}
+function showLevels(){document.getElementById('gameBox').innerHTML=`<h2>${current.emoji} ${current.name}</h2><p>اختر المستوى:</p><div class="levels">${[1,2,3,4,5].map(i=>`<button class="level ${i==1?'active':''}" onclick="start(${i})">المستوى ${ar(i)}</button>`).join('')}</div><div class="notice">⭐ كل جولة تحتوي على ١٠ أسئلة. الهدف هو تحسين نتيجتك الشخصية.</div>`;document.getElementById('modal').classList.add('show')}
+function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a}
+function make(type,l){
+ if(type==='place'){let n=rand(100,9999),s=String(n),pos=rand(0,s.length-1);return {text:`ما قيمة الرقم ${ar(s[pos])} في العدد ${ar(n)}؟`,ans:Number(s[pos])*10**(s.length-pos-1),opts:[]}}
+ if(type==='fraction'){let a=[1,2,3][rand(0,2)],b=a*rand(2,5);return {text:`ما الكسر الذي يمثل ${ar(a)} من ${ar(b)}؟`,ans:`${a}/${b}`,opts:[]}}
+ if(type==='word'){let a=rand(2,8+l*3),b=rand(2,10);return {text:`لدى المعلمة ${ar(a)} علب، في كل علبة ${ar(b)} أقلام. كم قلمًا لديها؟`,ans:a*b,opts:[]}}
+ if(type==='mix')type=['add','sub','mul','div'][rand(0,3)];
+ let a,b,ans;
+ if(type==='add'){a=rand(1,15*l);b=rand(1,15*l);ans=a+b}
+ if(type==='sub'){a=rand(5,18*l);b=rand(1,a);ans=a-b}
+ if(type==='mul'){a=rand(1,Math.min(12,l+4));b=rand(1,Math.min(12,l+5));ans=a*b}
+ if(type==='div'){b=rand(1,Math.min(12,l+3));ans=rand(1,Math.min(12,l+5));a=b*ans}
+ let opts=[ans];while(opts.length<4){let v=Math.max(0,ans+rand(1,Math.max(3,l*3))*(Math.random()<.5?-1:1));if(!opts.includes(v))opts.push(v)}
+ return {text:`${ar(a)} ${type==='add'?'+':type==='sub'?'−':type==='mul'?'×':'÷'} ${ar(b)} = ؟`,ans,opts:opts.sort(()=>Math.random()-.5)}
+}
+function start(l){level=l;index=0;score=0;qs=Array.from({length:10},()=>make(current.id,l));draw()}
+function draw(){clearInterval(timer);left=Math.max(7,17-level*2);let q=qs[index];if(q.opts.length===0){let base=typeof q.ans==='number'?q.ans:0;q.opts=[q.ans,...[1,2,3].map(k=>typeof q.ans==='number'?Math.max(0,base+k*rand(1,4)):q.ans.split('/').reverse().join('/'))].slice(0,4).sort(()=>Math.random()-.5)}
+document.getElementById('gameBox').innerHTML=`<h2>${current.emoji} ${current.name} — المستوى ${ar(level)}</h2><div class="progress"><i style="width:${index*10}%"></i></div><div class="question"><small>السؤال ${ar(index+1)} من ١٠ | الوقت: <b id="tm">${ar(left)}</b></small><div class="q">${q.text}</div><div class="answers">${q.opts.map((x,i)=>`<button class="answer" onclick="answer(${i},this)">${typeof x==='number'?ar(x):x}</button>`).join('')}</div></div><p>⭐ نتيجتك: <b>${ar(score)}</b></p>`;timer=setInterval(()=>{left--;document.getElementById('tm').textContent=ar(left);if(left<=0)answer(-1,null)},1000)}
+function answer(i,el){clearInterval(timer);let q=qs[index],chosen=i>=0?q.opts[i]:null,correct=String(chosen)===String(q.ans);document.querySelectorAll('.answer').forEach((b,j)=>{b.disabled=true;if(String(q.opts[j])===String(q.ans))b.classList.add('correct')});if(correct){score+=100+left*8;if(el)el.classList.add('correct')}else if(el)el.classList.add('wrong');setTimeout(()=>{index++;index>=10?finish():draw()},650)}
+function finish(){document.getElementById('gameBox').innerHTML=`<div class="result"><div style="font-size:70px">🎉🏆</div><h2>أحسنت! انتهت الجولة</h2><p>اللعبة: ${current.name} — المستوى ${ar(level)}</p><div class="score">${ar(score)}</div><p>نقطة</p><button class="btn primary" onclick="showLevels()">جولة جديدة</button> <button class="btn green" onclick="closeGame()">إنهاء</button></div>`}
+function closeGame(){clearInterval(timer);document.getElementById('modal').classList.remove('show')}
+function quickPractice(type){current=games.find(g=>g.id===type)||games[0];level=2;start(level);document.getElementById('modal').classList.add('show')}
+function generateToolQuestion(){let type=document.getElementById('toolType').value,q=make(type,2);document.getElementById('toolQ').textContent=q.text}
+function calculate(){let a=Number(document.getElementById('calcA').value),b=Number(document.getElementById('calcB').value),o=document.getElementById('calcOp').value,r=o==='+'?a+b:o==='−'?a-b:o==='×'?a*b:b?a/b:'غير ممكن';document.getElementById('calcResult').textContent=typeof r==='number'&&Number.isFinite(r)?ar(r):r}
+function toggleMenu(){document.querySelectorAll('.nav a').forEach(a=>a.style.display=a.style.display==='block'?'none':'block')}
+gamesRender();lessonsRender();
+</script>
+
+<script>
+const detailedLessons={
+'الأعداد والقيمة المكانية':['العدد يتكوّن من أرقام، ومكان الرقم يحدد قيمته.','الآحاد أول منزلة من اليمين، ثم العشرات، ثم المئات، ثم الآلاف.','في العدد ٣٤٢: ٢ قيمتها ٢، و٤ قيمتها ٤٠، و٣ قيمتها ٣٠٠.','تذكّر: ابدأ من اليمين وحدد منزلة الرقم قبل قيمته.'],
+'الجمع والطرح':['الجمع يعني ضم الكميات، والطرح يعني أخذ جزء أو معرفة الفرق.','رتب الأعداد حسب المنازل وابدأ من الآحاد.','في الجمع قد نحتاج إلى الحمل، وفي الطرح قد نحتاج إلى الاستلاف.','مثال: ٢٣ + ١٥ = ٣٨. اقرأ السؤال أولًا وحدد هل الكمية تزيد أم تنقص.'],
+'الضرب والقسمة':['الضرب هو جمع متكرر، والقسمة هي توزيع بالتساوي.','٤ × ٥ تعني أربع مجموعات، في كل مجموعة خمسة.','القسمة مرتبطة بالضرب ويمكن التأكد من القسمة بالضرب.','مثال: ٤ صناديق × ٥ كرات = ٢٠ كرة.'],
+'الكسور':['الكسر يعبّر عن جزء من كل مقسم إلى أجزاء متساوية.','البسط في الأعلى ويخبرنا بعدد الأجزاء التي أخذناها.','المقام في الأسفل ويخبرنا بعدد الأجزاء المتساوية في الكل.','مثال: جزء واحد من أربعة أجزاء متساوية = ١/٤. تخيل بيتزا مقسمة بالتساوي.'],
+'القياس والهندسة':['القياس يساعدنا في معرفة الطول والوزن والزمن، والهندسة تساعدنا في فهم الأشكال والمحيط.','نستخدم السنتيمتر والمتر للطول، والكيلوغرام للكتلة، والساعة والدقيقة للزمن.','المحيط هو المسافة حول الشكل.','مثال: مربع ضلعه ٥ سم، محيطه ٢٠ سم.'],
+'حل المسائل':['المسألة الكلامية تصبح سهلة عندما نحول الكلمات إلى معلومات رياضية.','اقرأ السؤال، حدد الأعداد، حدد المطلوب، ثم اختر العملية المناسبة.','لا تبدأ بالحساب قبل فهم المطلوب.','مثال: ٤ علب في كل منها ٥ أقلام: ٤ × ٥ = ٢٠ قلمًا.']
+};
+function showLesson(t,d){
+ const a=detailedLessons[t]||[d,'اقرأ الفكرة بهدوء.','جرّب المثال.','تدرّب حتى تشعر بالثقة.'];
+ document.getElementById('gameBox').innerHTML=`<div class="lesson-detail"><div class="lesson-hero">👩‍🏫 📚 🧒 ✨</div><h2>📚 ${t}</h2><p class="lesson-intro">${a[0]}</p><h3>🔎 نفهمها خطوة بخطوة</h3><div class="lesson-points">${a.slice(1,3).map((x,i)=>`<div><b>${ar(i+1)}</b><span>${x}</span></div>`).join('')}</div><div class="example-box"><h3>🧩 مثال بسيط</h3><p>${a[3]}</p></div><div class="tip-box"><h3>💡 نصيحة للطالب</h3><p>افهم الفكرة أولًا، ثم جرّب مثالًا بنفسك، وبعدها انتقل إلى اللعبة والتدريب.</p></div><button class="btn primary" onclick="closeGame()">فهمت، لنبدأ بالتدريب 🎯</button></div>`;
+ document.getElementById('modal').classList.add('show');
+}
+</script>
+</body>
+</html>
